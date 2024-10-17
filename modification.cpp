@@ -133,7 +133,8 @@ void main()
 
             if (juiceChoice == 8 && juiceChoice == 9 && juiceChoice == 10 && juiceChoice == 11)
             {
-                sum = sum * 0.2;
+                sumDiscount = sum * 0.2;
+                sum -= sumDiscount;
             }
 
             if (result > discountPrice)
