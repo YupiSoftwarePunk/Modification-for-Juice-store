@@ -131,6 +131,11 @@ void main()
                 sum += result;
             }
 
+            if (juiceChoice == 8 && juiceChoice == 9 && juiceChoice == 10 && juiceChoice == 11)
+            {
+                sum = sum * 0.2;
+            }
+
             if (result > discountPrice)
             {
                 minusResult = result * discount / 100;
