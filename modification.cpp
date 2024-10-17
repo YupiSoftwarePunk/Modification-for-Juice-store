@@ -8,7 +8,7 @@ void main()
     int litreChoice;
     int apple = 90, orange = 100, apricot = 110, pear = 150;
     int tomato = 70, onion = 60, ququmber = 85;
-    int garlic = 180, parsley = 190;
+    int garlic = 180, parsley = 190, seaBuckthorn = 175, cranberry = 165;
     float result{}, minusResult{}, parsleyDiscount = 5, minusParsley{}, minusOnion{};
     int luckyLitre = 4;
     char continuation;
@@ -28,17 +28,17 @@ void main()
             std::cout << "Овощные соки:\n";
             std::cout << "5. Томатный - 70р./л\n6. Луковый - 60р./л\n7. Огуречный - 85р./л\n\n";
             std::cout << "Чаи:\n";
-            std::cout << "8. Чесночный - 180р./л\n9. Петрушевый - 190р./л\n";
+            std::cout << "8. Чесночный - 180р./л\n9. Петрушевый - 190р./л\n10. Облипиховый - 175р./л\n11. Клюквенный - 165р./л\n";
 
             std::cin >> juiceChoice;
 
-            if (juiceChoice < 1 || juiceChoice > 9)
+            if (juiceChoice < 1 || juiceChoice > 11)
             {
                 do
                 {
                     std::cout << "Неверно введен номер товара, введите номер еще раз\n";
                     std::cin >> juiceChoice;
-                } while (juiceChoice < 1 || juiceChoice > 9);
+                } while (juiceChoice < 1 || juiceChoice > 11);
             }
 
 
@@ -119,6 +119,16 @@ void main()
                     result = parsley * litreChoice;
                     sum += result;
                 }
+            }
+            else if (juiceChoice == 10)
+            {
+                result = seaBuckthorn * litreChoice;
+                sum += result;
+            }
+            else if (juiceChoice == 11)
+            {
+                result = cranberry * litreChoice;
+                sum += result;
             }
 
             if (result > discountPrice)
